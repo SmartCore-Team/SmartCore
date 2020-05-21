@@ -3,7 +3,7 @@
 只负责管理设备并提供口子，不提供任何功能。
 
 ## 前言&设计初衷
-玩智能家居有一段时间了，用了很多平台，也折腾了很多，但是始终不是我想要的。
+玩智能家居有一段时间了，用了很多平台，也折腾了很多，但是始终不是我想要的。   
 其实只是想要一个：
 1. 能把所有设备都接入其中，并且本身很轻量级的平台;
 2. 通过上层app做加法提供功能，而不是平台本身很重有一堆功能让用户去做减法;
@@ -25,6 +25,9 @@
 |:-:|:-|:-|:-|:-|:-|:-|:-|:-|:-|
 |1|info|||||||获取系统信息|{"type": "info"}|
 |2|config|||||||获取配置信息|{"type": "config"}|
+|3|plugin|list||||||获取当前平台加载插件|{"type": "plugin", "method": "list"}|
+|4|plugin|load|["插件1", "插件2"]|||||加载插件|{"type": "method", "method": "load", "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]}|
+|5|plugin|unload|["插件1", "插件2"]|||||卸载插件|{"type": "method", "method": "unload", "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar"]}|
 
 ## Q&A
 1. 为什么使用Java开发？   
