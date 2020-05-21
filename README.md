@@ -20,14 +20,42 @@
 5. App: 应用，使用平台资源的上层应用。
 
 ## 接口文档
-### v1
-||type|method|pluginList|deviceIdList|propertyIdList|operation|value|描述|例(json格式)|
-|:-:|:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|1|info|||||||获取系统信息|{"type": "info"}|
-|2|config|||||||获取配置信息|{"type": "config"}|
-|3|plugin|list||||||获取当前平台加载插件|{"type": "plugin", "method": "list"}|
-|4|plugin|load|["插件1", "插件2"]|||||加载插件|{"type": "method", "method": "load", "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]}|
-|5|plugin|unload|["插件1", "插件2"]|||||卸载插件|{"type": "method", "method": "unload", "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar"]}|
+### v1 (已json为例)
+#### 获取平台信息
+```
+{
+    "type": "info"
+}
+```
+#### 获取配置信息
+```
+{
+    "type": "config"
+}
+```
+#### 获取当前平台加载插件
+```
+{
+    "type": "plugin",
+    "method": "list"
+}
+```
+#### 加载插件
+```
+{
+    "type": "plugin",
+    "method": "load",
+    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]
+}
+```
+#### 卸载插件
+```
+{
+    "type": "plugin",
+    "method": "unload",
+    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]
+}
+```
 
 ## Q&A
 1. 为什么使用Java开发？   
