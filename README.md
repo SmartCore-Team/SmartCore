@@ -9,7 +9,7 @@
 2. 通过上层app做加法提供功能，而不是平台本身很重有一堆功能让用户去做减法;
 3. 配置自由灵活可以融入任何设备、任何类型、任何属性、任何规则。
 
-## 架构
+## 架构图
 ![](https://raw.githubusercontent.com/SmartCore-Team/SmartCore/master/images/framework.png)
 
 ## 名词解释
@@ -23,15 +23,15 @@
 ### v1
 ||type|method|pluginList|deviceIdList|propertyIdList|operation|value|描述|例(json格式)|
 |:-:|:-|:-|:-|:-|:-|:-|:-|:-|:-|
-|1|info||||||||获取系统信息|{"type": "info"}|
-|2|config||||||||获取配置信息|{"type": "config"}|
+|1|info|||||||获取系统信息|{"type": "info"}|
+|2|config|||||||获取配置信息|{"type": "config"}|
 
 ## Q&A
-1. 为什么使用Java开发？
+1. 为什么使用Java开发？   
 因为群里的Java程序员最多。
 
-2. Java如何解决jar hell问题？
+2. Java如何解决jar hell问题？   
 程序加载plugin未使用默认的class loader，查找class规则为优先查找jar包本身，后找其他。所以plugin开发者若使用向下兼容有问题的依赖jar时，请打包成uber jar(fat jar)。
    
-3. 为什么暂时不开源？
+3. 为什么暂时不开源？   
 目前程序还属于验证设计是否合理的测试阶段，规范可能随时会变，甚至会大变，所以暂时不开源。
