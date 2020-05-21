@@ -45,7 +45,7 @@
 {
     "type": "plugin",
     "method": "load",
-    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]
+    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar"]
 }
 ```
 #### 卸载插件
@@ -53,7 +53,136 @@
 {
     "type": "plugin",
     "method": "unload",
-    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar]
+    "pluginList": ["smartcore-plugin-mqtt-0.0.1.jar", "smartcore-plugin-demo-0.0.1.jar"]
+}
+```
+#### 载入设备服务
+```
+{
+    "type": "device",
+    "method": "init",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 关闭设备服务
+```
+{
+    "type": "device",
+    "method": "close",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取所有设备ID
+```
+{
+    "type": "device",
+    "method": "list"
+}
+```
+#### 获取设备所有信息
+```
+{
+    "type": "device",
+    "method": "getDevice",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备FriendlyName
+```
+{
+    "type": "device",
+    "method": "getDeviceFriendlyName",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备类型
+```
+{
+    "type": "device",
+    "method": "getDeviceType",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备硬件信息
+```
+{
+    "type": "device",
+    "method": "getDeviceInfo",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备所有属性的全部信息
+```
+{
+    "type": "device",
+    "method": "getDeviceProperties",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备所有属性的值
+```
+{
+    "type": "device",
+    "method": "getPropertyValueMap",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
+}
+```
+#### 获取设备某些属性的全部信息
+```
+{
+    "type": "device",
+    "method": "getProperty",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"],
+    "propertyIdList": ["power", "mode"]
+}
+```
+#### 获取设备某些属性的值
+```
+{
+    "type": "device",
+    "method": "getPropertyValue",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"],
+    "propertyIdList": ["power", "mode"]
+}
+```
+#### 获取设备某些属性的FriendlyName
+```
+{
+    "type": "device",
+    "method": "getPropertyFriendlyName",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"],
+    "propertyIdList": ["power", "mode"]
+}
+```
+#### 设置设备某些属性的值
+```
+{
+    "type": "device",
+    "method": "setPropertyValue",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"],
+    "propertyIdList": ["power"],
+    "value": true
+}
+```
+#### 设置设备某些属性的值2
+```
+{
+    "type": "device",
+    "method": "setPropertyValue",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"],
+    "value": {
+        "power": true,
+        "mode": 3
+    }
+}
+```
+#### 操作设备
+```
+{
+    "type": "device",
+    "method": "operation",
+    "operation": "open",
+    "deviceIdList": ["AABBCCDDEEFF", "123456789"]
 }
 ```
 
