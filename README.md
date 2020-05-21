@@ -190,7 +190,7 @@
 1. 为什么使用Java开发？   
 因为群里的Java程序员最多。
 
-2. Java如何解决jar hell问题？   
+2. 如何解决平台与插件/插件与插件之间的jar hell问题？   
 程序加载plugin未使用默认的class loader，查找class规则为优先查找jar包本身，后找其他。所以plugin开发者若使用向下兼容有问题的依赖jar时，请打包成uber jar(fat jar)。
    
 3. 为什么暂时不开源？   
